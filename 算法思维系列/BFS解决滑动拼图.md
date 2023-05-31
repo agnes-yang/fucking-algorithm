@@ -97,76 +97,102 @@ int[][] neighbor = new int[][]{
 
 观察上图就能发现，如果二维数组中的某个元素 `e` 在一维数组中的索引为 `i`，那么 `e` 的左右相邻元素在一维数组中的索引就是 `i - 1` 和 `i + 1`，而 `e` 的上下相邻元素在一维数组中的索引就是 `i - n` 和 `i + n`，其中 `n` 为二维数组的列数。
 
-这样，对于 `m x n` 的二维数组，我们可以写一个函数来生成它的 `neighbor` 索引映射，篇幅所限，我这里就不写了。
+这样，对于 `m x n` 的二维数组，我们可以写一个函数来生成它的 `neighbor` 索引映射：
+
+```java
+int[][] generateNeighborMapping(int m, int n) {
+    int[][] neighbor = new int[m * n][];
+    for (int i = 0; i < m * n; i++) {
+        List<Integer> neighbors = new ArrayList<>();
+
+        // 如果不是第一列，有左侧邻居
+        if (i % n != 0) neighbors.add(i - 1);
+        // 如果不是最后一列，有右侧邻居
+        if (i % n != n - 1) neighbors.add(i + 1);
+        // 如果不是第一行，有上方邻居
+        if (i - n >= 0) neighbors.add(i - n);
+        // 如果不是最后一行，有下方邻居
+        if (i + n < m * n) neighbors.add(i + n);
+
+        // Java 语言特性，将 List 类型转为 int[] 数组
+        neighbor[i] = neighbors.stream().mapToInt(Integer::intValue).toArray();
+    }
+    return neighbor;
+}
+```
 
 至此，我们就把这个问题完全转化成标准的 BFS 问题了，借助前文 [BFS 算法框架](https://labuladong.github.io/article/fname.html?fname=BFS框架) 的代码框架，直接就可以套出解法代码了：
 
 <!-- muliti_language -->
 ```java
-public int slidingPuzzle(int[][] board) {
-    int m = 2, n = 3;
-    StringBuilder sb = new StringBuilder();
-    String target = "123450";
-    // 将 2x3 的数组转化成字符串作为 BFS 的起点
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            sb.append(board[i][j]);
-        }
-    }
-    String start = sb.toString();
-
-    // 记录一维字符串的相邻索引
-    int[][] neighbor = new int[][]{
-            {1, 3},
-            {0, 4, 2},
-            {1, 5},
-            {0, 4},
-            {3, 1, 5},
-            {4, 2}
-    };
-
-    /******* BFS 算法框架开始 *******/
-    Queue<String> q = new LinkedList<>();
-    HashSet<String> visited = new HashSet<>();
-    // 从起点开始 BFS 搜索
-    q.offer(start);
-    visited.add(start);
-
-    int step = 0;
-    while (!q.isEmpty()) {
-        int sz = q.size();
-        for (int i = 0; i < sz; i++) {
-            String cur = q.poll();
-            // 判断是否达到目标局面
-            if (target.equals(cur)) {
-                return step;
+class Solution {
+    public int slidingPuzzle(int[][] board) {
+        int m = 2, n = 3;
+        StringBuilder sb = new StringBuilder();
+        String target = "123450";
+        // 将 2x3 的数组转化成字符串作为 BFS 的起点
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                sb.append(board[i][j]);
             }
-            // 找到数字 0 的索引
-            int idx = 0;
-            for (; cur.charAt(idx) != '0'; idx++) ;
-            // 将数字 0 和相邻的数字交换位置
-            for (int adj : neighbor[idx]) {
-                String new_board = swap(cur.toCharArray(), adj, idx);
-                // 防止走回头路
-                if (!visited.contains(new_board)) {
-                    q.offer(new_board);
-                    visited.add(new_board);
+        }
+        String start = sb.toString();
+
+        // 记录一维字符串的相邻索引
+        int[][] neighbor = new int[][]{
+                {1, 3},
+                {0, 4, 2},
+                {1, 5},
+                {0, 4},
+                {3, 1, 5},
+                {4, 2}
+        };
+
+        /******* BFS 算法框架开始 *******/
+        Queue<String> q = new LinkedList<>();
+        HashSet<String> visited = new HashSet<>();
+        // 从起点开始 BFS 搜索
+        q.offer(start);
+        visited.add(start);
+
+        int step = 0;
+        while (!q.isEmpty()) {
+            int sz = q.size();
+            for (int i = 0; i < sz; i++) {
+                String cur = q.poll();
+                // 判断是否达到目标局面
+                if (target.equals(cur)) {
+                    return step;
+                }
+                // 找到数字 0 的索引
+                int idx = 0;
+                for (; cur.charAt(idx) != '0'; idx++) ;
+                // 将数字 0 和相邻的数字交换位置
+                for (int adj : neighbor[idx]) {
+                    String new_board = swap(cur.toCharArray(), adj, idx);
+                    // 防止走回头路
+                    if (!visited.contains(new_board)) {
+                        q.offer(new_board);
+                        visited.add(new_board);
+                    }
                 }
             }
+            step++;
         }
-        step++;
+        /******* BFS 算法框架结束 *******/
+        return -1;
     }
-    /******* BFS 算法框架结束 *******/
-    return -1;
-}
 
-private String swap(char[] chars, int i, int j) {
-    char temp = chars[i];
-    chars[i] = chars[j];
-    chars[j] = temp;
-    return new String(chars);
+    private String swap(char[] chars, int i, int j) {
+        char temp = chars[i];
+        chars[i] = chars[j];
+        chars[j] = temp;
+        return new String(chars);
+    }
 }
 ```
+
+<visual slug='sliding-puzzle'/>
 
 至此，这道题目就解决了，其实框架完全没有变，套路都是一样的，我们只是花了比较多的时间将滑动拼图游戏转化成 BFS 算法。
 
