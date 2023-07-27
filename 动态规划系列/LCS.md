@@ -1,7 +1,4 @@
----
-title: '详解最长公共子序列问题，秒杀三道动态规划题目'
-tags: ['动态规划', '子序列']
----
+# 详解最长公共子序列问题，秒杀三道动态规划题目
 
 <p align='center'>
 <a href="https://github.com/labuladong/fucking-algorithm" target="view_window"><img alt="GitHub" src="https://img.shields.io/github/stars/labuladong/fucking-algorithm?label=Stars&style=flat-square&logo=GitHub"></a>
@@ -12,7 +9,7 @@ tags: ['动态规划', '子序列']
 
 ![](https://labuladong.github.io/pictures/souyisou1.png)
 
-**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 已更新到 V2.1，[手把手刷二叉树系列课程](https://aep.xet.tech/s/3YGcq3) 上线。另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
+**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 和 [递归算法专题课](https://aep.xet.tech/s/3YGcq3) 限时附赠网站会员！[第 21 期打卡挑战](https://opedk.xet.tech/s/4ptSo2) 最后一天报名！另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
 
 
 
@@ -78,11 +75,12 @@ int longestCommonSubsequence(String s1, String s2);
 | - | [剑指 Offer II 095. 最长公共子序列](https://leetcode.cn/problems/qJnOS7/?show=1) |
 
 </details>
+<hr>
 
 
 
 **＿＿＿＿＿＿＿＿＿＿＿＿＿**
 
-应合作方要求，本文不便在此发布，请扫码关注回复关键词「LCS」或 [点这里](https://appktavsiei5995.pc.xiaoe-tech.com/detail/i_6298793ae4b09dda12708be8/1) 查看：
+本文为会员内容，请扫码关注公众号或 [点这里](https://appktavsiei5995.pc.xiaoe-tech.com/detail/i_6298793ae4b09dda12708be8/1) 查看：
 
 ![](https://labuladong.github.io/pictures/qrcode.jpg)

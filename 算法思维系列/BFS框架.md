@@ -1,7 +1,4 @@
----
-title: 'BFS 算法框架套路详解'
-tags: ['BFS 算法', '核心框架']
----
+# BFS 算法框架套路详解
 
 <p align='center'>
 <a href="https://github.com/labuladong/fucking-algorithm" target="view_window"><img alt="GitHub" src="https://img.shields.io/github/stars/labuladong/fucking-algorithm?label=Stars&style=flat-square&logo=GitHub"></a>
@@ -12,7 +9,7 @@ tags: ['BFS 算法', '核心框架']
 
 ![](https://labuladong.github.io/pictures/souyisou1.png)
 
-**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 已更新到 V2.1，[手把手刷二叉树系列课程](https://aep.xet.tech/s/3YGcq3) 上线。另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
+**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 和 [递归算法专题课](https://aep.xet.tech/s/3YGcq3) 限时附赠网站会员！[第 21 期打卡挑战](https://opedk.xet.tech/s/4ptSo2) 最后一天报名！另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
 
 
 
@@ -28,6 +25,8 @@ tags: ['BFS 算法', '核心框架']
 
 > tip：本文有视频版：[BFS 算法核心框架套路](https://www.bilibili.com/video/BV1oT411u7Vn/)。建议关注我的 B 站账号，我会用视频领读的方式带大家学习那些稍有难度的算法技巧。
 
+
+
 后台有很多人问起 BFS 和 DFS 的框架，今天就来说说吧。
 
 首先，你要说我没写过 BFS 框架，这话没错，今天写个框架你背住就完事儿了。但要是说没写过 DFS 框架，那你还真是说错了，**其实 DFS 算法就是回溯算法**，我们前文 [回溯算法框架套路详解](https://labuladong.github.io/article/fname.html?fname=回溯算法详解修订版) 就写过了，而且写得不是一般得好，建议好好复习，嘿嘿嘿~
@@ -38,7 +37,7 @@ BFS 相对 DFS 的最主要的区别是：**BFS 找到的路径一定是最短�
 
 本文就由浅入深写两道 BFS 的典型题目，分别是「二叉树的最小高度」和「打开密码锁的最少步数」，手把手教你怎么写 BFS 算法。
 
-## 一、算法框架
+### 一、算法框架
 
 要说框架的话，我们先举例一下 BFS 出现的常见场景好吧，**问题的本质就是让你在一幅「图」中找到从起点 `start` 到终点 `target` 的最近距离，这个例子听起来很枯燥，但是 BFS 算法问题其实都是在干这个事儿**，把枯燥的本质搞清楚了，再去欣赏各种问题的包装才能胸有成竹嘛。
 
@@ -65,7 +64,6 @@ int BFS(Node start, Node target) {
     
     q.offer(start); // 将起点加入队列
     visited.add(start);
-    int step = 0; // 记录扩散的步数
 
     while (q not empty) {
         int sz = q.size();
@@ -83,9 +81,8 @@ int BFS(Node start, Node target) {
                 }
             }
         }
-        /* 划重点：更新步数在这里 */
-        step++;
     }
+    // 如果走到这里，说明在图中没有找到目标节点
 }
 ```
 
@@ -413,7 +410,7 @@ while (!q1.isEmpty() && !q2.isEmpty()) {
  - [我的刷题心得](https://labuladong.github.io/article/fname.html?fname=算法心得)
  - [旅游省钱大法：加权最短路径](https://labuladong.github.io/article/fname.html?fname=旅行最短路径)
  - [环检测及拓扑排序算法](https://labuladong.github.io/article/fname.html?fname=拓扑排序)
- - [番外：用算法打败算法](https://labuladong.github.io/article/fname.html?fname=PDF中的算法)
+ - [用算法打败算法](https://labuladong.github.io/article/fname.html?fname=PDF中的算法)
  - [算法学习和心流体验](https://labuladong.github.io/article/fname.html?fname=心流)
 
 </details><hr>
@@ -432,8 +429,13 @@ while (!q1.isEmpty() && !q2.isEmpty()) {
 | [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/?show=1) | [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/?show=1) |
 | [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/?show=1) | [1091. 二进制矩阵中的最短路径](https://leetcode.cn/problems/shortest-path-in-binary-matrix/?show=1) |
 | [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/?show=1) | [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/?show=1) |
+| [1926. Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/?show=1) | [1926. 迷宫中离入口最近的出口](https://leetcode.cn/problems/nearest-exit-from-entrance-in-maze/?show=1) |
 | [286. Walls and Gates](https://leetcode.com/problems/walls-and-gates/?show=1)🔒 | [286. 墙与门](https://leetcode.cn/problems/walls-and-gates/?show=1)🔒 |
+| [310. Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/?show=1) | [310. 最小高度树](https://leetcode.cn/problems/minimum-height-trees/?show=1) |
+| [365. Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/?show=1) | [365. 水壶问题](https://leetcode.cn/problems/water-and-jug-problem/?show=1) |
 | [431. Encode N-ary Tree to Binary Tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/?show=1)🔒 | [431. 将 N 叉树编码为二叉树](https://leetcode.cn/problems/encode-n-ary-tree-to-binary-tree/?show=1)🔒 |
+| [490. The Maze](https://leetcode.com/problems/the-maze/?show=1)🔒 | [490. 迷宫](https://leetcode.cn/problems/the-maze/?show=1)🔒 |
+| [505. The Maze II](https://leetcode.com/problems/the-maze-ii/?show=1)🔒 | [505. 迷宫 II](https://leetcode.cn/problems/the-maze-ii/?show=1)🔒 |
 | [542. 01 Matrix](https://leetcode.com/problems/01-matrix/?show=1) | [542. 01 矩阵](https://leetcode.cn/problems/01-matrix/?show=1) |
 | [773. Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/?show=1) | [773. 滑动谜题](https://leetcode.cn/problems/sliding-puzzle/?show=1) |
 | [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/?show=1) | [863. 二叉树中所有距离为 K 的结点](https://leetcode.cn/problems/all-nodes-distance-k-in-binary-tree/?show=1) |
@@ -442,6 +444,7 @@ while (!q1.isEmpty() && !q2.isEmpty()) {
 | - | [剑指 Offer II 109. 开密码锁](https://leetcode.cn/problems/zlDJc7/?show=1) |
 
 </details>
+<hr>
 
 
 

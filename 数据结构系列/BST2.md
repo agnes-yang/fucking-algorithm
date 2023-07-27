@@ -1,7 +1,4 @@
----
-title: '手把手带你刷二叉搜索树（第二期）'
-tags: ['数据结构', '二叉搜索树', '二叉树', '分解问题的思路']
----
+# 手把手带你刷二叉搜索树（第二期）
 
 <p align='center'>
 <a href="https://github.com/labuladong/fucking-algorithm" target="view_window"><img alt="GitHub" src="https://img.shields.io/github/stars/labuladong/fucking-algorithm?label=Stars&style=flat-square&logo=GitHub"></a>
@@ -12,7 +9,7 @@ tags: ['数据结构', '二叉搜索树', '二叉树', '分解问题的思路']
 
 ![](https://labuladong.github.io/pictures/souyisou1.png)
 
-**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 已更新到 V2.1，[手把手刷二叉树系列课程](https://aep.xet.tech/s/3YGcq3) 上线。另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
+**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 和 [递归算法专题课](https://aep.xet.tech/s/3YGcq3) 限时附赠网站会员！[第 21 期打卡挑战](https://opedk.xet.tech/s/4ptSo2) 最后一天报名！另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
 
 
 
@@ -27,7 +24,10 @@ tags: ['数据结构', '二叉搜索树', '二叉树', '分解问题的思路']
 
 **-----------**
 
-在开头先打个广告，我的 [手把手刷二叉树课程](https://aep.xet.tech/s/3YGcq3) 按照公式和套路讲解了 150 道二叉树题目，只需一顿饭钱，就能手把手带你刷完二叉树分类的题目，迅速掌握递归思维，让你豁然开朗。我绝对有这个信心，信不信，可以等你看完我的二叉树算法系列文章再做评判。
+
+> info：在开头先打个广告，我的 [手把手刷二叉树课程](https://aep.xet.tech/s/3YGcq3) 按照公式和套路讲解了 150 道二叉树题目，只需一顿饭钱，就能手把手带你刷完二叉树分类的题目，迅速掌握递归思维，让你豁然开朗。我绝对有这个信心，信不信，可以等你看完我的二叉树算法系列文章再做评判。
+
+
 
 我们前文 [东哥带你刷二叉搜索树（特性篇）](https://labuladong.github.io/article/fname.html?fname=BST1) 介绍了 BST 的基本特性，还利用二叉搜索树「中序遍历有序」的特性来解决了几道题目，本文来实现 BST 的基础操作：判断 BST 的合法性、增、删、查。其中「删」和「判断合法性」略微复杂。
 
@@ -341,6 +341,7 @@ void BST(TreeNode root, int target) {
 | - | [剑指 Offer 33. 二叉搜索树的后序遍历序列](https://leetcode.cn/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/?show=1) |
 
 </details>
+<hr>
 
 
 

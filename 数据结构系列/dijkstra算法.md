@@ -1,7 +1,4 @@
----
-title: '我写了一个模板，把 Dijkstra 算法变成了默写题'
-tags: ['数据结构', '图论算法']
----
+# 我写了一个模板，把 Dijkstra 算法变成了默写题
 
 <p align='center'>
 <a href="https://github.com/labuladong/fucking-algorithm" target="view_window"><img alt="GitHub" src="https://img.shields.io/github/stars/labuladong/fucking-algorithm?label=Stars&style=flat-square&logo=GitHub"></a>
@@ -12,7 +9,7 @@ tags: ['数据结构', '图论算法']
 
 ![](https://labuladong.github.io/pictures/souyisou1.png)
 
-**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 已更新到 V2.1，[手把手刷二叉树系列课程](https://aep.xet.tech/s/3YGcq3) 上线。另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
+**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 和 [递归算法专题课](https://aep.xet.tech/s/3YGcq3) 限时附赠网站会员！[第 21 期打卡挑战](https://opedk.xet.tech/s/4ptSo2) 最后一天报名！另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
 
 
 
@@ -882,6 +879,7 @@ double dijkstra(int start, int end, List<double[]>[] graph) {
  - [并查集（Union-Find）算法](https://labuladong.github.io/article/fname.html?fname=UnionFind算法详解)
  - [我的刷题心得](https://labuladong.github.io/article/fname.html?fname=算法心得)
  - [旅游省钱大法：加权最短路径](https://labuladong.github.io/article/fname.html?fname=旅行最短路径)
+ - [本站简介](https://labuladong.github.io/article/fname.html?fname=home)
  - [环检测及拓扑排序算法](https://labuladong.github.io/article/fname.html?fname=拓扑排序)
 
 </details><hr>
@@ -898,9 +896,11 @@ double dijkstra(int start, int end, List<double[]>[] graph) {
 | LeetCode | 力扣 |
 | :----: | :----: |
 | [286. Walls and Gates](https://leetcode.com/problems/walls-and-gates/?show=1)🔒 | [286. 墙与门](https://leetcode.cn/problems/walls-and-gates/?show=1)🔒 |
+| [310. Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/?show=1) | [310. 最小高度树](https://leetcode.cn/problems/minimum-height-trees/?show=1) |
 | [542. 01 Matrix](https://leetcode.com/problems/01-matrix/?show=1) | [542. 01 矩阵](https://leetcode.cn/problems/01-matrix/?show=1) |
 
 </details>
+<hr>
 
 
 

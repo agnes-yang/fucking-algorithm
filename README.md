@@ -220,14 +220,17 @@ PDF 共两本，一本《labuladong 的算法秘籍》类似教材，帮你系�
 
 <!-- table start -->
 
+<!--  -->
+### [本站简介](https://labuladong.github.io/article/fname.html?fname=home)
+
 ### [准备工作：安装刷题全家桶](https://labuladong.github.io/article/fname.html?fname=全家桶简介)
   * [配套 Chrome 刷题插件](https://labuladong.github.io/article/fname.html?fname=chrome插件简介)
   * [配套 vscode 刷题插件](https://labuladong.github.io/article/fname.html?fname=vscode插件简介)
   * [配套 JetBrains 刷题插件](https://labuladong.github.io/article/fname.html?fname=jb插件简介)
-  * [配套 PDF 算法教材](https://labuladong.github.io/article/fname.html?fname=pdf简介)
-  * [番外：用算法打败算法](https://labuladong.github.io/article/fname.html?fname=PDF中的算法)
+  * [算法可视化功能简介](https://labuladong.github.io/article/fname.html?fname=可视化简介)
   * [数据结构精品课](https://labuladong.github.io/article/fname.html?fname=ds课程简介)
   * [二叉树（递归）专题课](https://labuladong.github.io/article/fname.html?fname=tree课程简介)
+  * [14 天刷题打卡挑战](https://labuladong.github.io/article/fname.html?fname=打卡挑战简介)
   * [学习本站所需的 Java 基础](https://labuladong.github.io/article/fname.html?fname=网站Java基础)
 
 ### [第零章、核心框架汇总](https://labuladong.github.io/algo/)
@@ -287,21 +290,21 @@ PDF 共两本，一本《labuladong 的算法秘籍》类似教材，帮你系�
 
   * [手把手刷图算法](https://labuladong.github.io/algo/)
     * [图论基础及遍历算法](https://labuladong.github.io/article/fname.html?fname=图)
+    * [众里寻他千百度：名流问题](https://labuladong.github.io/article/fname.html?fname=名人问题)
     * [环检测及拓扑排序算法](https://labuladong.github.io/article/fname.html?fname=拓扑排序)
     * [二分图判定算法](https://labuladong.github.io/article/fname.html?fname=二分图)
     * [并查集（Union-Find）算法](https://labuladong.github.io/article/fname.html?fname=UnionFind算法详解)
     * [Kruskal 最小生成树算法](https://labuladong.github.io/article/fname.html?fname=kruskal)
     * [Prim 最小生成树算法](https://labuladong.github.io/article/fname.html?fname=prim算法)
     * [Dijkstra 算法模板及应用](https://labuladong.github.io/article/fname.html?fname=dijkstra算法)
-    * [众里寻他千百度：名流问题](https://labuladong.github.io/article/fname.html?fname=名人问题)
 
   * [手把手设计数据结构](https://labuladong.github.io/algo/)
+    * [单调栈结构解决三道算法题](https://labuladong.github.io/article/fname.html?fname=单调栈)
+    * [单调队列结构解决滑动窗口问题](https://labuladong.github.io/article/fname.html?fname=单调队列)
     * [算法就像搭乐高：带你手撸 LRU 算法](https://labuladong.github.io/article/fname.html?fname=LRU算法)
     * [算法就像搭乐高：带你手撸 LFU 算法](https://labuladong.github.io/article/fname.html?fname=LFU)
     * [前缀树算法模板秒杀五道算法题](https://labuladong.github.io/article/fname.html?fname=trie)
     * [一道求中位数的算法题把我整不会了](https://labuladong.github.io/article/fname.html?fname=数据流中位数)
-    * [单调栈结构解决三道算法题](https://labuladong.github.io/article/fname.html?fname=单调栈)
-    * [单调队列结构解决滑动窗口问题](https://labuladong.github.io/article/fname.html?fname=单调队列)
     * [二叉堆详解实现优先级队列](https://labuladong.github.io/article/fname.html?fname=二叉堆详解实现优先级队列)
     * [队列实现栈以及栈实现队列](https://labuladong.github.io/article/fname.html?fname=队列实现栈栈实现队列)
     * [设计朋友圈时间线功能](https://labuladong.github.io/article/fname.html?fname=设计Twitter)
@@ -360,14 +363,14 @@ PDF 共两本，一本《labuladong 的算法秘籍》类似教材，帮你系�
     * [如何用 BFS 算法秒杀各种智力题](https://labuladong.github.io/article/fname.html?fname=BFS解决滑动拼图)
 
   * [数学运算技巧](https://labuladong.github.io/algo/)
-    * [谈谈游戏中的随机算法](https://labuladong.github.io/article/fname.html?fname=随机算法)
+    * [一行代码就能解决的算法题](https://labuladong.github.io/article/fname.html?fname=一行代码解决的智力题)
+    * [几个反直觉的概率问题](https://labuladong.github.io/article/fname.html?fname=几个反直觉的概率问题)
     * [常用的位操作](https://labuladong.github.io/article/fname.html?fname=常用的位操作)
+    * [谈谈游戏中的随机算法](https://labuladong.github.io/article/fname.html?fname=随机算法)
     * [讲两道常考的阶乘算法题](https://labuladong.github.io/article/fname.html?fname=阶乘题目)
     * [如何高效寻找素数](https://labuladong.github.io/article/fname.html?fname=打印素数)
     * [如何高效进行模幂运算](https://labuladong.github.io/article/fname.html?fname=superPower)
     * [如何同时寻找缺失和重复的元素](https://labuladong.github.io/article/fname.html?fname=缺失和重复的元素)
-    * [一行代码就能解决的算法题](https://labuladong.github.io/article/fname.html?fname=一行代码解决的智力题)
-    * [几个反直觉的概率问题](https://labuladong.github.io/article/fname.html?fname=几个反直觉的概率问题)
 
   * [经典面试题](https://labuladong.github.io/algo/)
     * [分治算法详解：运算优先级](https://labuladong.github.io/article/fname.html?fname=分治算法)
